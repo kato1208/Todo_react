@@ -47,6 +47,11 @@ class App extends Component {
               key={todo.title}
               title={todo.title}
               description={todo.description}
+              onClick={() => {
+                this.setState({
+                  todoList: this.state.todoList.filter(x => x != todo)
+                })
+              }}
             />
           ))}
         </div>
